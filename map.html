@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Maps Embed Example</title>
+</head>
+<body>
+    <h1>Location Map</h1>
+    
+    <!-- Map iframe with id to be accessed by JavaScript -->
+    <iframe 
+        id="location" 
+        src="https://www.google.com/maps?q=Daffodil+International+University,+Birulia&output=embed" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+
+    <!-- Button to change map location dynamically -->
+    <button onclick="changeMapLocation()">Show New Location</button>
+
+    <script>
+        // Function to change the map location dynamically
+        function changeMapLocation() {
+            const loc = document.getElementById("location");
+            // Change the src to display a new location
+            loc.src = "https://www.google.com/maps?q=Nandanpur,+Rajshahi&output=embed";
+        }
+    </script>
+
+</body>
+</html>
